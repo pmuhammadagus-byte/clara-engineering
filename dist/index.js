@@ -37,14 +37,7 @@ async function readFileSafe(path) {
   }
 }
 
-async function safeCheck(cmd) {
-  try {
-    const { execSync } = await import("node:child_process");
-    return execSync(cmd, { encoding: "utf-8", timeout: 8000, stdio: ["ignore", "pipe", "pipe"] });
-  } catch (e) {
-    return e.stdout ? String(e.stdout) : null;
-  }
-}
+
 
 export default definePluginEntry({
   id: "clara-engineering",
@@ -221,12 +214,7 @@ export default definePluginEntry({
         const branches = (code.match(/if|for|while|switch|catch/g) || []).length;
         if (branches > 12) push("MEDIUM", "maintainability", `High branch density (${branches}) in one unit — extract functions / early returns.`);
 
-        let syntaxNote = "";
-        if (params.filePath && /\.(js|mjs|cjs|ts)$/.test(params.filePath)) {
-          const out = await safeCheck(`node --check "${params.filePath}" 2>&1`);
-          if (out && /error/i.test(out)) syntaxNote = `⚠️ Syntax check:\n\`\`\`\n${out.slice(0, 1500)}\n\`\`\``;
-          else if (out !== null) syntaxNote = "✅ Syntax check passed (node --check).";
-        }
+        let syntaxNote = "ℹ️ Sandboxed mode: static heuristics only (no subprocess). Run your own linter/compiler for full validation.";
 
         const order = { CRITICAL: 0, HIGH: 1, MEDIUM: 2, LOW: 3, INFO: 4 };
         findings.sort((a, b) => order[a.sev] - order[b.sev]);

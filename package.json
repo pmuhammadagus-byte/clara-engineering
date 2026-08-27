@@ -1,11 +1,13 @@
 {
   "name": "clara-engineering",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Elite software-engineering toolkit by Clara: architecture, systematic debugging, senior code review, spec synthesis, runtime diagnostics.",
   "type": "module",
   "main": "./dist/index.js",
   "openclaw": {
-    "extensions": ["./dist/index.js"],
+    "extensions": [
+      "./dist/index.js"
+    ],
     "compat": {
       "pluginApi": ">=2026.3.24-beta.2",
       "minGatewayVersion": "2026.3.24-beta.2"
@@ -15,7 +17,15 @@
       "pluginSdkVersion": "2026.7.1"
     }
   },
-  "keywords": ["openclaw", "openclaw-plugin", "engineering", "coding", "debug", "architecture", "code-review"],
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "engineering",
+    "coding",
+    "debug",
+    "architecture",
+    "code-review"
+  ],
   "author": "Clara (for Bos)",
   "license": "MIT"
 }
