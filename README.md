@@ -1,5 +1,7 @@
 <div align="center">
 
+![Clara Engineering](assets/banner.svg)
+
 # 🛠️ Clara Engineering
 ### Elite Coding & Debug Engine for OpenClaw
 
