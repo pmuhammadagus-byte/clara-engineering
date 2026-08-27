@@ -1,6 +1,7 @@
 {
   "name": "clara-engineering",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "license": "MIT",
   "description": "Elite software-engineering toolkit by Clara: architecture, systematic debugging, senior code review, spec synthesis, runtime diagnostics.",
   "type": "module",
   "main": "./dist/index.js",
