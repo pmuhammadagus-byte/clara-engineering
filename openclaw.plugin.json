@@ -1,0 +1,42 @@
+{
+  "id": "clara-engineering",
+  "name": "Clara Engineering — Elite Coding & Debug Engine",
+  "description": "Top-tier software-engineering toolkit: architecture design, systematic debugging, senior code review, spec synthesis, and runtime diagnostics. Built by Clara for Bos.",
+  "contracts": {
+    "tools": [
+      "eng_architect",
+      "eng_debug",
+      "eng_review",
+      "eng_spec",
+      "eng_diagnose"
+    ]
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "strictness": {
+        "type": "string",
+        "description": "How rigorous the analysis should be",
+        "enum": ["pragmatic", "standard", "elite"],
+        "default": "elite"
+      },
+      "languageHint": {
+        "type": "string",
+        "description": "Default language context for review/diagnostics (e.g. ts, py, rust, go)",
+        "default": ""
+      },
+      "maxFindings": {
+        "type": "integer",
+        "description": "Cap on number of findings returned per run",
+        "default": 25,
+        "minimum": 1,
+        "maximum": 100
+      }
+    }
+  },
+  "version": "1.0.0"
+}
