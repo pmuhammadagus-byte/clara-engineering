@@ -1,5 +1,5 @@
 {
-  "name": "@clara/openclaw-engineering",
+  "name": "clara-engineering",
   "version": "1.0.0",
   "description": "Elite software-engineering toolkit by Clara: architecture, systematic debugging, senior code review, spec synthesis, runtime diagnostics.",
   "type": "module",
