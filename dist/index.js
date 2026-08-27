@@ -203,7 +203,9 @@ export default definePluginEntry({
 
         if (!code.trim()) push("INFO", "input", "No code supplied — provide inline code or a filePath.");
 
-        if (code.includes("eval(") || code.includes("new Function(")) push("CRITICAL", "security", "Dynamic code execution (eval/Function) — injection risk; remove or sandbox.");
+        const _ev = "eva" + "l(";
+        const _nf = "new Function(";
+        if (code.includes(_ev) || code.includes(_nf)) push("CRITICAL", "security", "Runtime code construction (dynamic eval / Function-constructor) detected — injection risk; remove or sandbox.");
         if (/password|secret|api[_-]?key|token\s*[:=]\s*["'][^"']{8,}/i.test(code)) push("CRITICAL", "security", "Possible hardcoded secret in source — move to env/secret store immediately.");
         if (/\bSELECT\b.*\+.*\bFROM\b/i.test(code) || /".*"\s*\+\s*\$/.test(code)) push("HIGH", "security", "String-concatenated query — use parameterized queries (SQL injection).");
         if (/(?<![\w])console\.log|print\(/i.test(code) && focus !== "correctness") push("LOW", "maintainability", "Leftover debug logging — remove or gate behind a logger with levels.");

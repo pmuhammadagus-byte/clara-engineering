@@ -648,38 +648,38 @@
         {
           "name": "definePluginEntry",
           "file": "dist/index.js",
-          "line": 49,
-          "ref": "dist/index.js:49"
+          "line": 42,
+          "ref": "dist/index.js:42"
         },
         {
           "name": "registerTool",
           "file": "dist/index.js",
-          "line": 133,
-          "ref": "dist/index.js:133"
+          "line": 126,
+          "ref": "dist/index.js:126"
         },
         {
           "name": "registerTool",
           "file": "dist/index.js",
-          "line": 190,
-          "ref": "dist/index.js:190"
+          "line": 183,
+          "ref": "dist/index.js:183"
         },
         {
           "name": "registerTool",
           "file": "dist/index.js",
-          "line": 262,
-          "ref": "dist/index.js:262"
+          "line": 250,
+          "ref": "dist/index.js:250"
         },
         {
           "name": "registerTool",
           "file": "dist/index.js",
-          "line": 335,
-          "ref": "dist/index.js:335"
+          "line": 323,
+          "ref": "dist/index.js:323"
         },
         {
           "name": "registerTool",
           "file": "dist/index.js",
-          "line": 63,
-          "ref": "dist/index.js:63"
+          "line": 56,
+          "ref": "dist/index.js:56"
         }
       ],
       "manifestContracts": [
@@ -696,7 +696,7 @@
           "path": "openclaw.plugin.json",
           "id": "clara-engineering",
           "name": "Clara Engineering — Elite Coding & Debug Engine",
-          "version": "1.0.2",
+          "version": "1.0.3",
           "keys": [
             "activation",
             "configSchema",
@@ -720,7 +720,7 @@
       "package": {
         "path": "package.json",
         "name": "clara-engineering",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "type": "module",
         "main": "./dist/index.js",
         "npmPack": {
@@ -761,7 +761,7 @@
         {
           "path": "package.json",
           "name": "clara-engineering",
-          "version": "1.0.2",
+          "version": "1.0.3",
           "type": "module",
           "main": "./dist/index.js",
           "npmPack": {
@@ -869,7 +869,7 @@
       "evidence": [
         "package.json",
         "clara-engineering",
-        "version:1.0.2"
+        "version:1.0.3"
       ]
     },
     {
