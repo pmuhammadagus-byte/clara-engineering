@@ -1,6 +1,6 @@
 {
   "id": "clara-engineering",
-  "name": "Clara Engineering — Elite Coding & Debug Engine",
+  "name": "Clara Engineering \u2014 Elite Coding & Debug Engine",
   "description": "Top-tier software-engineering toolkit: architecture design, systematic debugging, senior code review, spec synthesis, and runtime diagnostics. Built by Clara for Bos.",
   "contracts": {
     "tools": [
@@ -42,5 +42,5 @@
       }
     }
   },
-  "version": "1.0.5"
+  "version": "1.0.7"
 }
